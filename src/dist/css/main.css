@@ -1,1 +1,181 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background: #ecf4ff;
+}
+
+.mt__input {
+  background-color: #ecf4ff;
+  border: 1px solid #c3dcfe;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px 16px;
+  width: 100%;
+  margin: 4px 0;
+  color: #3272ca;
+  font-weight: 600;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.mt__input:hover {
+  background: #c3dcfe;
+}
+
+.mt__input-labels {
+  color: #303030;
+}
+
+.mt__input-wrapper {
+  width: 100%;
+}
+
+.mt__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ecf4ff;
+  border: 1px solid #c3dcfe;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px 16px;
+  width: 100%;
+  margin: 4px 0;
+  color: #3272ca;
+  font-weight: 600;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.mt__select:hover {
+  background: #c3dcfe;
+}
+
+.mt__multiple-btn-chose {
+  background-color: #ecf4ff;
+  border: 1px solid #c3dcfe;
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mt__multiple-btn-chose .mt__multiple-btn {
+  width: calc(100% / 2);
+  border-radius: 0;
+  background: #ecf4ff;
+  color: #3272ca;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+.mt__multiple-btn-chose .mt__multiple-btn:hover {
+  background: #c3dcfe;
+}
+
+.mt__multiple-btn-chose .mt__multiple-btn-chosen {
+  background-color: #2f6bbd;
+  color: #ecf4ff;
+}
+
+.mt__multiple-btn-chose .mt__multiple-btn-chosen:hover {
+  background: #2f6bbd;
+}
+
+.mt__btn {
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px 16px;
+  width: 100%;
+  background: #2f6bbd;
+  cursor: pointer;
+  color: #ecf4ff;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+  font-weight: 600;
+}
+
+.mt__btn:hover {
+  background: #265597;
+}
+
+.mt__btn:active {
+  background: #1c4071;
+}
+
+.mt__container {
+  width: 100%;
+  height: 100vh;
+}
+
+.mt__row {
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  min-width: 300px;
+  width: 20vw;
+  height: 100vh;
+  background: #fff;
+  -webkit-box-shadow: 8px 0px 25px #dce5f0;
+          box-shadow: 8px 0px 25px #dce5f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sidebar .logo {
+  max-width: 48px;
+}
+
+.sidebar .logo__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+}
+
+.sidebar .logo__text {
+  font-size: 2.618rem;
+  color: #303030;
+  font-weight: 800;
+}
+
+.sidebar .logo__text-thinner {
+  font-size: 1em;
+  color: inherit;
+  font-weight: 400;
+}
+
+.sidebar .mt__hint-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 36px 0;
+}
+
+.sidebar .mt__hint-section p {
+  color: #3272ca;
+  font-weight: 300;
+  text-align: right;
+  margin-right: 4px;
+}
+/*# sourceMappingURL=main.css.map */

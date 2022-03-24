@@ -16,7 +16,72 @@
 </head>
 
 <body>
+    <div class="mt__container">
+        <div class="sidebar">
+            <div class="mt__container">
+                <div class="mt__row">
+                    <div class="mt__col">
+                        <img src="./img/Logo.png" class="logo" alt="">
+                    </div>
+                    <div class="mt__col logo__text-wrapper">
+                        <h1 class="logo__text">Font<span class="logo__text-thinner">Ratio</span></h1>
+                    </div>
+                </div>
+                <div class="sidebar-center">
+                    <div class="mt__row">
+                        <div class="mt__col mt__input-wrapper">
+                            <label for="initialScale" class="mt__input-labels">
+                                Initial scale
+                            </label>
+                            <input class="mt__input" type="text" name="" id="initialScale" value="14">
+                        </div>
+                    </div>
+                    <div class="mt__row">
+                        <div class="mt__col mt__input-wrapper">
+                            <label for="choseRatio" class="mt__input-labels">
+                                Chose ratio
+                            </label>
+                            <select name="" id="choseRatio" class="mt__select">
+                                <option value="goldenRatio">Golden Ratio</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt__row">
+                        <div class="mt__col mt__input-wrapper">
+                            <label for="customText" class="mt__input-labels">
+                                Custom Text
+                            </label>
+                            <input class="mt__input" type="text" name="" id="customText"
+                                value="Lorem ipsum dolor sit amet, consectetur">
+                        </div>
+                    </div>
+                    <div class="mt__row">
+                        <div class="mt__col mt__input-wrapper">
+                            <label for="unitsSelect" class="mt__input-labels">
+                                Units of measurement
+                            </label>
+                            <div class="mt__multiple-btn-chose">
+                                <button class="mt__multiple-btn">px</button>
+                                <button class="mt__multiple-btn mt__multiple-btn-chosen">em</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt__row">
+                        <div class="mt__col mt__input-wrapper">
+                            <button class="mt__btn">Generate</button>
+                        </div>
+                    </div>
+                    <div class="mt__row">
+                        <div class="mt__col mt__hint-section">
+                            <p>Copy the measurement by clicking on the desired text size</p>
+                            <img src="./img/hint_icon.svg" alt="">
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
