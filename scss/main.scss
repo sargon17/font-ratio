@@ -116,9 +116,13 @@ body {
 
 // ------------------- / General Stiles ------------------
 
+.main-display {
+  display: flex;
+}
+
 .sidebar {
   min-width: 300px;
-  width: 20vw;
+  width: calc((100% / 12) * 3);
   height: 100vh;
   background: #fff;
   box-shadow: 8px 0px 25px #dce5f0;
@@ -158,6 +162,32 @@ body {
       font-weight: 300;
       text-align: right;
       margin-right: 4px;
+    }
+  }
+}
+.fonts-section {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-row {
+    margin: 18px 0;
+  }
+  .fonts__side-value {
+    p {
+      color: $blue-text;
+    }
+  }
+
+  .font__text-section {
+    p {
+      height: 1.2;
+      width: max-content;
+      overflow: hidden;
+      color: $blue-text;
     }
   }
 }

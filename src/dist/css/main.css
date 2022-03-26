@@ -121,9 +121,15 @@ body {
   display: flex;
 }
 
+.main-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sidebar {
   min-width: 300px;
-  width: 20vw;
+  width: calc((100% / 12) * 3);
   height: 100vh;
   background: #fff;
   -webkit-box-shadow: 8px 0px 25px #dce5f0;
@@ -177,5 +183,38 @@ body {
   font-weight: 300;
   text-align: right;
   margin-right: 4px;
+}
+
+.fonts-section {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fonts-section-row {
+  margin: 18px 0;
+}
+
+.fonts-section .fonts__side-value p {
+  color: #3272ca;
+}
+
+.fonts-section .font__text-section p {
+  height: 1.2;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow: hidden;
+  color: #3272ca;
 }
 /*# sourceMappingURL=main.css.map */
