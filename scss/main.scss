@@ -197,6 +197,7 @@ body {
       overflow: hidden;
       color: $blue-text;
       cursor: pointer;
+      user-select: none;
     }
   }
 }
