@@ -177,17 +177,26 @@ body {
     margin: 18px 0;
   }
   .fonts__side-value {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50px;
+    margin: 0 20px;
     p {
       color: $blue-text;
     }
   }
 
   .font__text-section {
+    display: flex;
+    align-items: center;
+
     p {
       height: 1.2;
       width: max-content;
       overflow: hidden;
       color: $blue-text;
+      cursor: pointer;
     }
   }
 }

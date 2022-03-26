@@ -205,8 +205,31 @@ body {
   margin: 18px 0;
 }
 
+.fonts-section .fonts__side-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  margin: 0 20px;
+}
+
 .fonts-section .fonts__side-value p {
   color: #3272ca;
+}
+
+.fonts-section .font__text-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fonts-section .font__text-section p {
@@ -216,5 +239,6 @@ body {
   width: max-content;
   overflow: hidden;
   color: #3272ca;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
