@@ -96,7 +96,7 @@ body {
 
 @media only screen and (max-width: 428px) {
   .mt__multiple-btn-chose .mt__multiple-btn {
-    padding-left: 1.2em;
+    padding: 0.8em 1.2em;
   }
 }
 
@@ -349,7 +349,8 @@ body {
             justify-content: flex-start;
   }
   .fonts-section .fonts-section-row {
-    margin: 10px;
+    margin: 10px 0;
+    padding: 0;
   }
 }
 

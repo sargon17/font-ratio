@@ -87,7 +87,7 @@ body {
       }
     }
     @media only screen and (max-width: 428px) {
-      padding-left: 1.2em;
+      padding: 0.8em 1.2em;
     }
   }
 }
@@ -264,7 +264,8 @@ body {
     height: fit-content;
     justify-content: flex-start;
     .fonts-section-row {
-      margin: 10px;
+      margin: 10px 0;
+      padding: 0;
     }
   }
 }
