@@ -8,6 +8,27 @@ let ratioSettings = {
   isUnitPixel: false,
 };
 
+function unitSwitcher(targetId) {
+  if (targetId === "optionPx" && !ratioSettings.isUnitPixel) {
+    ratioSettings.isUnitPixel = !ratioSettings.isUnitPixel;
+  } else if (targetId === "optionEm" && ratioSettings.isUnitPixel) {
+    ratioSettings.isUnitPixel = !ratioSettings.isUnitPixel;
+  }
+  // console.log(isUnitPixel);
+  updateUnitSwitcher();
+}
+function updateUnitSwitcher() {
+  switch (ratioSettings.isUnitPixel) {
+    case true:
+      optionPx.classList.add("mt__multiple-btn-chosen");
+      optionEm.classList.remove("mt__multiple-btn-chosen");
+      break;
+    case false:
+      optionPx.classList.remove("mt__multiple-btn-chosen");
+      optionEm.classList.add("mt__multiple-btn-chosen");
+      break;
+  }
+}
 function ratioCalcEm(ratio) {
   let result = [];
 
@@ -43,5 +64,8 @@ generateBtn.addEventListener("click", () => {
 });
 
 optionPx.addEventListener("click", (target) => {
+  unitSwitcher(target.target.id);
+});
+optionEm.addEventListener("click", (target) => {
   unitSwitcher(target.target.id);
 });
