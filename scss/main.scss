@@ -130,9 +130,9 @@ body {
   background: #fff;
   box-shadow: 8px 0px 25px #dce5f0;
   display: flex;
-  //   flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
   &-center {
-    align-self: center;
   }
 
   .logo {
@@ -159,12 +159,14 @@ body {
   .mt__hint-section {
     display: flex;
     margin: 36px 0;
+    justify-content: flex-end;
 
     p {
       color: $blue-text;
       font-weight: 300;
       text-align: right;
       margin-right: 4px;
+      width: 70%;
     }
   }
 }
@@ -175,6 +177,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: $transition;
 
   &-row {
     margin: 18px 0;
@@ -187,6 +190,7 @@ body {
     margin: 0 20px;
     p {
       color: $blue-text;
+      user-select: none;
     }
   }
 

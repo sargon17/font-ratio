@@ -141,12 +141,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.sidebar-center {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .sidebar .logo {
@@ -180,6 +181,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 36px 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .sidebar .mt__hint-section p {
@@ -187,6 +191,7 @@ body {
   font-weight: 300;
   text-align: right;
   margin-right: 4px;
+  width: 70%;
 }
 
 .fonts-section {
@@ -203,6 +208,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
 .fonts-section-row {
@@ -225,6 +232,10 @@ body {
 
 .fonts-section .fonts__side-value p {
   color: #3272ca;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .fonts-section .font__text-section {
