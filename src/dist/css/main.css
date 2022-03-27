@@ -333,6 +333,7 @@ body {
   border-radius: 8px;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
+  font-weight: 500;
 }
 
 .fonts-section .font__text-section p:active {
