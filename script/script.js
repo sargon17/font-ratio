@@ -49,13 +49,13 @@ function ratioCalcEm(ratio) {
 
 function generatingHandeler(initialValue, ratio) {
   initialValue = parseInt(initialValue);
-  let values = [];
-  values = ratioCalcEm(ratio);
+  let emValues = ratioCalcEm(ratio);
+  let pxValues = emValues.map((value) => value * initialValue);
 
+  console.log(emValues, pxValues);
   for (let index = 0; index < 6; index++) {
     let text = document.querySelector(`#text-${index}`);
-    text.setAttribute("style", `font-size: ${values[index] * initialValue}px;`);
-    console.log(text);
+    text.setAttribute("style", `font-size: ${pxValues[index]}px;`);
   }
 }
 
