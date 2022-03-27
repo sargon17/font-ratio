@@ -3,6 +3,12 @@
   font-size: 14px;
 }
 
+@media only screen and (max-width: 428px) {
+  * {
+    font-size: 12px;
+  }
+}
+
 body {
   background: #ecf4ff;
 }
@@ -88,6 +94,12 @@ body {
   background: #2f6bbd;
 }
 
+@media only screen and (max-width: 428px) {
+  .mt__multiple-btn-chose .mt__multiple-btn {
+    padding-left: 1.2em;
+  }
+}
+
 .mt__btn {
   border-radius: 8px;
   overflow: hidden;
@@ -129,6 +141,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 428px) {
+  .main-display {
+    display: block;
+  }
 }
 
 .sidebar {
@@ -192,6 +210,45 @@ body {
   text-align: right;
   margin-right: 4px;
   width: 70%;
+}
+
+@media only screen and (max-width: 428px) {
+  .sidebar {
+    min-width: none;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .sidebar-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sidebar .units-toggle-section,
+  .sidebar .initial-scale-section {
+    width: 33.33333%;
+  }
+  .sidebar .generate-btn-section,
+  .sidebar .chose-ratio-section {
+    width: 66.66667%;
+  }
+  .sidebar .custom-text-section {
+    width: 100%;
+  }
+  .sidebar .generate-btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .sidebar .mt__hint-section {
+    margin: 10px;
+  }
 }
 
 .fonts-section {
@@ -266,6 +323,20 @@ body {
 
 .fonts-section .font__text-section p:active {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 428px) {
+  .fonts-section {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .fonts-section .fonts-section-row {
+    margin: 10px;
+  }
 }
 
 .message-displayer {

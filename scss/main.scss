@@ -12,6 +12,9 @@ $transition: all 350ms ease-out;
 * {
   font-family: "Maven Pro", sans-serif;
   font-size: 14px;
+  @media only screen and (max-width: 428px) {
+    font-size: 12px;
+  }
 }
 // ------------------- General Stiles ------------------
 body {
@@ -83,6 +86,9 @@ body {
         background: $blue;
       }
     }
+    @media only screen and (max-width: 428px) {
+      padding-left: 1.2em;
+    }
   }
 }
 .mt__btn {
@@ -121,6 +127,10 @@ body {
 
 .main-display {
   display: flex;
+
+  @media only screen and (max-width: 428px) {
+    display: block;
+  }
 }
 
 .sidebar {
@@ -132,8 +142,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  &-center {
-  }
 
   .logo {
     max-width: 48px;
@@ -167,6 +175,33 @@ body {
       text-align: right;
       margin-right: 4px;
       width: 70%;
+    }
+  }
+  @media only screen and (max-width: 428px) {
+    min-width: none;
+    width: 100%;
+    height: fit-content;
+    &-center {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .units-toggle-section,
+    .initial-scale-section {
+      width: (100% / 12) * 4;
+    }
+    .generate-btn-section,
+    .chose-ratio-section {
+      width: (100% / 12) * 8;
+    }
+    .custom-text-section {
+      width: 100%;
+    }
+    .generate-btn-wrapper {
+      display: flex;
+      align-items: flex-end;
+    }
+    .mt__hint-section {
+      margin: 10px;
     }
   }
 }
@@ -212,6 +247,13 @@ body {
       &:active {
         background-color: rgba(255, 255, 255, 0.8);
       }
+    }
+  }
+  @media only screen and (max-width: 428px) {
+    height: fit-content;
+    justify-content: flex-start;
+    .fonts-section-row {
+      margin: 10px;
     }
   }
 }
