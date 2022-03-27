@@ -1,38 +1,47 @@
 const initialScale = document.querySelector("#initialScale");
 const generateBtn = document.querySelector("#generateBtn");
+const optionPx = document.querySelector("#optionPx");
+const optionEm = document.querySelector("#optionEm");
 
-let goldenRatioN = 1.618;
+let ratioSettings = {
+  goldenRatio: 1.618,
+  isUnitPixel: false,
+};
 
-// ratioCalc(14, goldenRatioN)
-
-function ratioCalcPixels(initialValue, ratio) {
+function ratioCalcEm(ratio) {
   let result = [];
 
   for (let index = 0; index < 6; index++) {
     let n;
     if (index === 0) {
-      n = initialValue / ratio;
+      n = 1 / ratio;
     } else if (index === 1) {
-      n = initialValue;
+      n = 1;
     } else {
-      n = initialValue * ratio ** (index - 1);
+      n = ratio ** (index - 1);
     }
-    n.toFixed(3);
+    n = n.toFixed(3);
     result.push(n);
   }
   return result;
 }
+
 function generatingHandeler(initialValue, ratio) {
   initialValue = parseInt(initialValue);
-  let values = ratioCalcPixels(initialValue, ratio);
+  let values = [];
+  values = ratioCalcEm(ratio);
 
   for (let index = 0; index < 6; index++) {
     let text = document.querySelector(`#text-${index}`);
-    text.setAttribute("style", `font-size: ${values[index]}px;`);
+    text.setAttribute("style", `font-size: ${values[index] * initialValue}px;`);
     console.log(text);
   }
 }
 
 generateBtn.addEventListener("click", () => {
-  generatingHandeler(initialScale.value, goldenRatioN);
+  generatingHandeler(initialScale.value, ratioSettings.goldenRatio);
+});
+
+optionPx.addEventListener("click", (target) => {
+  unitSwitcher(target.target.id);
 });
