@@ -186,6 +186,12 @@ body {
       display: flex;
       flex-wrap: wrap;
     }
+    .logo {
+      max-width: 28px;
+      &__text {
+        font-size: 1.618rem;
+      }
+    }
     .units-toggle-section,
     .initial-scale-section {
       width: (100% / 12) * 4;

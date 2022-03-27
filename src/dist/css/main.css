@@ -229,6 +229,12 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .sidebar .logo {
+    max-width: 28px;
+  }
+  .sidebar .logo__text {
+    font-size: 1.618rem;
+  }
   .sidebar .units-toggle-section,
   .sidebar .initial-scale-section {
     width: 33.33333%;
