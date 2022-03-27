@@ -5,7 +5,7 @@
 
 @media only screen and (max-width: 428px) {
   * {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -253,6 +253,12 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .sidebar .hint-section {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
   }
   .sidebar .mt__hint-section {
     margin: 10px;

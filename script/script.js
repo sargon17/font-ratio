@@ -153,3 +153,6 @@ optionEm.addEventListener("click", (target) => {
 initialScale.addEventListener("keydown", (event) => {
   initialScaleHandler(event);
 });
+initialScale.addEventListener("keyup", () =>
+  generatingHandler(initialScale.value, ratioSettings.goldenRatio)
+);

@@ -13,7 +13,7 @@ $transition: all 350ms ease-out;
   font-family: "Maven Pro", sans-serif;
   font-size: 14px;
   @media only screen and (max-width: 428px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 // ------------------- General Stiles ------------------
@@ -206,6 +206,10 @@ body {
     .generate-btn-wrapper {
       display: flex;
       align-items: flex-end;
+    }
+    .hint-section {
+      justify-content: flex-end;
+      width: 100%;
     }
     .mt__hint-section {
       margin: 10px;
