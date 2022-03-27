@@ -2,6 +2,7 @@ const initialScale = document.querySelector("#initialScale");
 const generateBtn = document.querySelector("#generateBtn");
 const optionPx = document.querySelector("#optionPx");
 const optionEm = document.querySelector("#optionEm");
+const customText = document.querySelector("#customText");
 
 let ratioSettings = {
   goldenRatio: 1.618,
@@ -11,6 +12,7 @@ let emValues = [];
 let pxValues = [];
 generatingHandeler(initialScale.value, ratioSettings.goldenRatio);
 updateUnitSwitcher();
+textModifier();
 
 function unitSwitcher(targetId) {
   if (targetId === "optionPx" && !ratioSettings.isUnitPixel) {
@@ -86,10 +88,26 @@ function generatingHandeler(initialValue, ratio) {
   }
 }
 
+function textModifier() {
+  let value = customText.value;
+  const elements = document.querySelectorAll(".font__text-section p");
+
+  if (!value) {
+    value = "Lorem ipsum dolor sit amet, consectetur";
+  }
+
+  elements.forEach((element) => {
+    element.innerHTML = value;
+  });
+}
+
 generateBtn.addEventListener("click", () => {
   generatingHandeler(initialScale.value, ratioSettings.goldenRatio);
 });
 
+customText.addEventListener("keyup", () => {
+  textModifier();
+});
 optionPx.addEventListener("click", (target) => {
   unitSwitcher(target.target.id);
 });
