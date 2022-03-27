@@ -10,7 +10,7 @@ let ratioSettings = {
 };
 let emValues = [];
 let pxValues = [];
-generatingHandeler(initialScale.value, ratioSettings.goldenRatio);
+generatingHandler(initialScale.value, ratioSettings.goldenRatio);
 updateUnitSwitcher();
 textModifier();
 
@@ -20,7 +20,7 @@ function unitSwitcher(targetId) {
   } else if (targetId === "optionEm" && ratioSettings.isUnitPixel) {
     ratioSettings.isUnitPixel = !ratioSettings.isUnitPixel;
   }
-  // console.log(isUnitPixel);
+
   updateUnitSwitcher();
 }
 
@@ -72,7 +72,7 @@ function ratioCalcEm(ratio) {
   return result;
 }
 
-function generatingHandeler(initialValue, ratio) {
+function generatingHandler(initialValue, ratio) {
   initialValue = parseInt(initialValue);
 
   emValues = ratioCalcEm(ratio);
@@ -81,7 +81,6 @@ function generatingHandeler(initialValue, ratio) {
     return roundNumber(value, 3);
   });
 
-  console.log(emValues, pxValues);
   for (let index = 0; index < 6; index++) {
     let text = document.querySelector(`#text-${index}`);
     text.setAttribute("style", `font-size: ${pxValues[index]}px;`);
@@ -101,8 +100,22 @@ function textModifier() {
   });
 }
 
+function initialScaleHandeler() {
+  switch (event.key) {
+    case "ArrowUp":
+      initialScale.value = parseInt(initialScale.value) + 1;
+      break;
+    case "ArrowDown":
+      if (initialScale.value > 0) {
+        initialScale.value = parseInt(initialScale.value) - 1;
+      }
+      break;
+  }
+  generatingHandler(initialScale.value, ratioSettings.goldenRatio);
+}
+
 generateBtn.addEventListener("click", () => {
-  generatingHandeler(initialScale.value, ratioSettings.goldenRatio);
+  generatingHandler(initialScale.value, ratioSettings.goldenRatio);
 });
 
 customText.addEventListener("keyup", () => {
@@ -113,4 +126,8 @@ optionPx.addEventListener("click", (target) => {
 });
 optionEm.addEventListener("click", (target) => {
   unitSwitcher(target.target.id);
+});
+
+initialScale.addEventListener("keydown", (event) => {
+  initialScaleHandler();
 });
