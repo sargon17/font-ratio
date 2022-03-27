@@ -233,7 +233,6 @@ body {
 }
 
 .fonts-section .font__text-section p {
-  height: 1.2;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -244,5 +243,13 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding: 0.1em 0.2em;
+  border-radius: 8px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.fonts-section .font__text-section p:active {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 /*# sourceMappingURL=main.css.map */

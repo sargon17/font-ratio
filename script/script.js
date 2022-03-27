@@ -3,6 +3,7 @@ const generateBtn = document.querySelector("#generateBtn");
 const optionPx = document.querySelector("#optionPx");
 const optionEm = document.querySelector("#optionEm");
 const customText = document.querySelector("#customText");
+const textsSizes = document.querySelectorAll(".font__text-section p");
 
 let ratioSettings = {
   goldenRatio: 1.618,
@@ -13,6 +14,22 @@ let pxValues = [];
 generatingHandler(initialScale.value, ratioSettings.goldenRatio);
 updateUnitSwitcher();
 textModifier();
+
+textsSizes.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    textClickHandler(event);
+  });
+});
+
+function textClickHandler(event) {
+  let value;
+  if (ratioSettings.isUnitPixel) {
+    value = event.target.style.fontSize;
+  } else {
+    value = event.target.className;
+  }
+  navigator.clipboard.writeText(`font-size: ${value};`);
+}
 
 function unitSwitcher(targetId) {
   if (targetId === "optionPx" && !ratioSettings.isUnitPixel) {
@@ -84,6 +101,7 @@ function generatingHandler(initialValue, ratio) {
   for (let index = 0; index < 6; index++) {
     let text = document.querySelector(`#text-${index}`);
     text.setAttribute("style", `font-size: ${pxValues[index]}px;`);
+    text.className = `${emValues[index]}em`;
   }
 }
 
@@ -100,7 +118,7 @@ function textModifier() {
   });
 }
 
-function initialScaleHandeler() {
+function initialScaleHandler(event) {
   switch (event.key) {
     case "ArrowUp":
       initialScale.value = parseInt(initialScale.value) + 1;
@@ -129,5 +147,5 @@ optionEm.addEventListener("click", (target) => {
 });
 
 initialScale.addEventListener("keydown", (event) => {
-  initialScaleHandler();
+  initialScaleHandler(event);
 });
