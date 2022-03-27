@@ -29,6 +29,10 @@ function textClickHandler(event) {
     value = event.target.className;
   }
   navigator.clipboard.writeText(`font-size: ${value};`);
+
+  const message = document.querySelector("#messageDisplayer");
+  message.classList.remove("mt__d-none");
+  setTimeout(() => message.classList.add("mt__d-none"), 500);
 }
 
 function unitSwitcher(targetId) {

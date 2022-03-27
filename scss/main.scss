@@ -113,6 +113,9 @@ body {
   padding: 4px 16px;
   display: flex;
 }
+.mt__d-none {
+  opacity: 0;
+}
 
 // ------------------- / General Stiles ------------------
 
@@ -206,5 +209,21 @@ body {
         background-color: rgba(255, 255, 255, 0.8);
       }
     }
+  }
+}
+
+.message-displayer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.4em 0.8em;
+  background-color: $blue;
+  border-radius: 8px;
+  transition: $transition;
+
+  p {
+    font-weight: 500;
+    color: $light-blue;
   }
 }
