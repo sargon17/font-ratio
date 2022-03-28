@@ -156,12 +156,3 @@ initialScale.addEventListener("keydown", (event) => {
 initialScale.addEventListener("keyup", () =>
   generatingHandler(initialScale.value, ratioSettings.goldenRatio)
 );
-
-// generate random image
-const randomImage = document.querySelector("#randomImage");
-randomImage.addEventListener("click", () => {
-  const randomNumber = Math.floor(Math.random() * 10);
-  const randomImageUrl = `https://picsum.photos/id/${randomNumber}/200/300`;
-  const randomImageElement = document.querySelector("#randomImageElement");
-  randomImageElement.setAttribute("src", randomImageUrl);
-});
