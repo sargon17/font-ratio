@@ -91,10 +91,6 @@ function choseRatioHendler(event) {
   );
 }
 
-ratioList.addEventListener("change", (event) => {
-  choseRatioHendler(event);
-});
-
 // copy to clipboard the value
 function textClickHandler(event) {
   let value;
@@ -248,3 +244,6 @@ initialScale.addEventListener("keyup", () =>
     ratioSettings.ratios[ratioSettings.selectedRatio].value
   )
 );
+ratioList.addEventListener("change", (event) => {
+  choseRatioHendler(event);
+});
